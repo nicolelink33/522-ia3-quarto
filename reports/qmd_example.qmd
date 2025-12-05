@@ -1,20 +1,18 @@
 ---
 title: "DSCI 310: Historical Horse Population in Canada"
 author: "Tiffany Timbers & Jordan Bourak"
-format: 
-    pdf:
-        toc: true
-        toc-depth: 2
-    html:
-        toc: true
-        toc-depth: 2
 editor: source
-execute:
-    echo: false
-project:
-    output-dir:
-        docs
+format:
+  html:
+    toc: true
+    toc-depth: 3
+  pdf:
+    toc: true
+    toc-depth: 3
 bibliography: references.bib
+execute:
+  echo: false
+
 ---
 
 ```{python}
@@ -57,10 +55,10 @@ to further support this hypothesis.
 
 Suppose we were interested in looking in more closely at the province 
 with the highest spread (in terms of standard deviation) of horse populations. 
-We present the standard deviations in @tbl-horse_sd.
+We present the standard deviations in @tbl-horse-sd.
 
 ```{python}
-#| label: tbl-horse_sd
+#| label: tbl-horse-sd
 #| tbl-cap: Standard deviation of historical (1906-1972) horse populations for each Canadian province.
 
 horses_sd_table = pd.read_csv("../results/horses_sd.csv")
@@ -72,7 +70,7 @@ Note that we define standard deviation (of a sample) as
 
 $$s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }$$
 
-Additionally, note that in @tbl-horse_sd we consider the sample standard deviation of the number of horses during the same time span as @fig-horse-canada.
+Additionally, note that in @tbl-horse-sd we consider the sample standard deviation of the number of horses during the same time span as @fig-horse-canada.
 
 ![Horse populations for the province with the largest standard deviation](../results/horse_pops_plot_largest_sd.png){#fig-horse-largest width=50%}
 
